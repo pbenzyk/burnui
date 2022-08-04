@@ -42,4 +42,7 @@ export default {
 h1 {
   font-size: 20px;
 }
+*{
+    font-family: 'Kanit', sans-serif;
+}
 </style>

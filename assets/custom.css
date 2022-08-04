@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 *{
-    font-family: 'Kanit', sans-serif!important;
+    font-family: 'Kanit', sans-serif;
 }
 .w-300px{
     width:300px;
@@ -15,7 +15,7 @@
     font-weight: 500px!important;
 }
 .v-input--selection-controls__input > .mdi-checkbox-marked { 
-    color: #FE7640!important;
+    color: #FE7640!important;∂
 }
 .esap-bg{
     background-color: #FE7640;
