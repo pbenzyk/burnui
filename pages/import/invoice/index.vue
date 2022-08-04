@@ -105,7 +105,7 @@
                 <v-card class="h-full ml-5 ">
                     <div class="p-8">
                         <div class="flex border-b-2 border-gray-200">
-                            <v-btn @click="$router.push('/import/add')" class="w-60 ml-2" text x-large><span class="font-semibold">Declaration Control</span></v-btn>
+                            <v-btn @click="$router.push('/import/')" class="w-60 ml-2" text x-large><span class="font-semibold">Declaration Control</span></v-btn>
                             <v-btn class="w-60" dark x-large color="base"><span class="font-semibold">Invoice</span></v-btn>
                             <v-spacer></v-spacer>
                             <Core-ButtonInfo></Core-ButtonInfo>
