@@ -36,7 +36,7 @@
 
                 <div class="flex space-x-4 ">
                     <div class="w-full">
-                        <label class="text-sm font-semibold">วันที่เข้า</label>
+                        <label class="text-sm font-semibold">วันที่นำเข้า</label>
                         <v-text-field dense label="" type="date" color="base" outlined></v-text-field>
                     </div>
                     <div class="w-full">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <label class="text-sm font-semibold">นำเข้าดดยทาง</label>
+                <label class="text-sm font-semibold">นำเข้าโดยทาง</label>
                 <v-combobox dense label="กรุณาเลือก" color="base" outlined></v-combobox>
 
                 <div class="flex space-x-4">
@@ -140,17 +140,17 @@
                 <label class="text-sm font-semibold">บัตรผ่านพิธีการ</label>
 
                 <div class="flex space-x-4 pt-3">
-                    <div class="w-full">
-                        <label class="text-base font-semibold">ชื่อ</label>
-                        <v-text-field dense label="ระบุข้อมูล..." color="base" outlined></v-text-field>
+                <div class="w-1/2 ">
+                        <label class="text-sm font-semibold">ชื่อ</label>
+                        <v-combobox dense label="ระบุข้อมูล..." color="base" outlined></v-combobox>
                     </div>
                     <div class="w-full">
                         <br>
-                        <v-text-field dense label="ระบุข้อมูล..." color="base" outlined></v-text-field>
+                        <v-text-field dense label="เลขบัตรผ่านพิธีการ" color="base" outlined></v-text-field>
                     </div>
                     <div class="w-full">
                         <br>
-                        <v-text-field dense label="ระบุข้อมูล..." color="base" outlined></v-text-field>
+                        <v-text-field dense label="หมายเลขโทรศัพท์" color="base" outlined></v-text-field>
                     </div>
 
                 </div>
@@ -219,8 +219,8 @@
                         </div>
 
                         <v-textarea background-color="white" color="base" dense label="ระบุข้อมูล..." outlined></v-textarea>
-                        <v-checkbox class="font-semibold" color="red" dense label="มีปัญหาเรื่องพิดัด / ราคา / ต้องการให้ตรวจสอบ (ขอพบเจ้่าหน้าที่)"></v-checkbox>
-                        <v-checkbox class="font-semibold" color="red" dense label="ขออนุญาตเปิดตรวจสอบที่ (มัดลวด)"></v-checkbox>
+                        <v-checkbox class="font-semibold" color="red" dense label="มีปัญหาเรื่องพิกัด/ราคา/ต้องการให้ตรวจสอบ (ขอพบเจ้าหน้าที่)"></v-checkbox>
+                        <v-checkbox class="font-semibold" color="red" dense label="ขออนุญาตเปิดตรวจนอกสถานที่ (มัดลวด)"></v-checkbox>
                         <v-checkbox class="font-semibold" color="red" dense label="ชำระค่าธรรมเนียมการผ่านพิธีการศุลกากร"></v-checkbox>
                     </div>
 

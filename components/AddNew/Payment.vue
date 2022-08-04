@@ -21,7 +21,7 @@
                     </div>
                     <div class="w-1/2 ">
                         <br>
-                        <v-text-field dense label="" color="base" outlined></v-text-field>
+                        <v-text-field dense label="" value="ธนาคาร ดอยช์แบงก์ เอจี สาขากรุงเทพ" color="base" outlined></v-text-field>
 
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="w-1/2 ">
                                     <br>
-                                    <v-text-field dense label="" color="base" outlined></v-text-field>
+                                    <v-text-field dense label="" value="ธนาคาร ดอยช์แบงก์ เอจี สาขากรุงเทพ" color="base" outlined></v-text-field>
                                 </div>
                             </div>
                         </div> 
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="w-1/2 ">
                                     <br>
-                                    <v-text-field dense label="" color="base" outlined></v-text-field>
+                                    <v-text-field dense label="" value="ธนาคาร ดอยช์แบงก์ เอจี สาขากรุงเทพ" color="base" outlined></v-text-field>
                                 </div>
                             </div>
                             <div class="flex space-x-4 pt-4">
@@ -100,13 +100,13 @@
                                 </div>
                                 <div class="w-1/2 ">
                                     <br>
-                                    <v-text-field dense label="" color="base" outlined></v-text-field>
+                                    <v-text-field dense label="" value="ธนาคาร ดอยช์แบงก์ เอจี สาขากรุงเทพ" color="base" outlined></v-text-field>
                                 </div>
                             </div>
                             <div class="flex space-x-4 pt-4">
                                 <div class="w-1/2 ">
                                     <label class="text-base font-semibold">สาขา</label>
-                                    <v-text-field dense label="กรุณาเลือก" color="base" outlined></v-text-field>
+                                    <v-text-field dense label="000001" color="base" outlined></v-text-field>
                                 </div>
                                 <div class="w-1/2 ">
                                     <label class="text-base font-semibold">ยอดเงินวางประกัน</label>
@@ -137,7 +137,7 @@
                                 </div>
                                 <div class="w-1/2 ">
                                     <br>
-                                    <v-text-field dense label="" color="base" outlined></v-text-field>
+                                    <v-text-field dense label="" value="ธนาคาร ดอยช์แบงก์ เอจี สาขากรุงเทพ" color="base" outlined></v-text-field>
                                 </div>
                             </div>
                             <div class="flex space-x-4 pt-4">
@@ -167,7 +167,7 @@
                                 <v-text-field dense label="ระบุข้อมูล..." color="base" outlined></v-text-field>
 
                                 <label class="text-sm font-semibold">ยอดเงินหักในบัญชี</label>
-                                <v-text-field dense label="ระบุข้อมูล..." color="base" outlined></v-text-field>
+                                <v-text-field dense label=" 0.00" color="base" outlined></v-text-field>
 
                                 <label class="text-sm font-semibold">Payment Type</label>
                                 <v-text-field dense label="ระบุข้อมูล..." color="base" outlined></v-text-field>
@@ -212,7 +212,7 @@
                 </div>
 
                 <div class="  w-full">
-                    <label class="text-sm font-semibold">เงินประกัน</label>
+                    <label class="text-sm font-semibold">เงินประกันรวม</label>
                     <div class="flex w-full">
                         <v-text-field dense label="0.00" color="base" outlined></v-text-field>
                         <v-btn class="ml-3 rounded-lg" depressed color="#CED4DA"> THB</v-btn>

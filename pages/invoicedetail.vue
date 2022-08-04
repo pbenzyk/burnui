@@ -4,11 +4,10 @@
         <div class="esap-header">
             <div class="pl-20 pt-6">
                 <span class="text-breadcrumbs ">Import Declaration List /</span>
-                <span class="text-breadcrumbs font-semibold">Import Declaration List/</span>
-                <span class="text-breadcrumbs font-semibold">Add New</span>
+                <span class="text-breadcrumbs font-semibold">Import Declaration List</span>
             </div>
             <div class="pl-20 pr-20 pt-14 flex items-end">
-                <h2 class="font-semibold text-3xl text-white">DECLARATION CONTROL</h2>
+                <h2 class="font-semibold text-3xl text-white">INVOICE CONTROL</h2>
                 <v-spacer></v-spacer>
                 <v-btn class="ml-1 " x-large elevation="0" color="headmenu">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,14 +143,7 @@
             <div class="p-2 w-full md:w-11/12">
                 <v-card class="h-full ml-5">
                     <div class="p-8">
-                        <div class="flex border-b-2 border-gray-200">
-                            <v-btn class="w-60" dark x-large color="base"><span class="font-semibold">Declaration Control</span></v-btn>
-                            <v-btn class="w-60 ml-2" text   x-large  ><span class="font-semibold">Invoice</span></v-btn>
-                            <v-spacer></v-spacer>
-                            <v-btn class="pb-1" fab color="grey" outlined>
-                                <v-icon>fa-thin fa-circle-info</v-icon>
-                            </v-btn>
-                        </div>
+                        
 
                         <div class="flex justify-center items-center my-4 bg-gray">
                             <div @click="activeTab = index" :class="activeTab===index ? 'bg-orange-base text-orange-base' : ' text-gray-500'" class="w-1/3 text-center cursor-pointer py-2 px-4 rounded transition" v-for="(tab, index) in tabs" :key="index">
@@ -162,13 +154,22 @@
                             </div>
                         </div>
                         <div v-if="activeTab == 0">
-                            <AddNew-Declaration></AddNew-Declaration>
+                            <InvocieDetail-Invociedetail></InvocieDetail-Invociedetail>
                         </div>
                         <div  v-if="activeTab == 1">
-                            <AddNew-Payment></AddNew-Payment>
+                            <InvocieDetail-TaxIncentives></InvocieDetail-TaxIncentives>
                         </div>
                         <div  v-if="activeTab == 2">
-                            <AddNew-Trading></AddNew-Trading>
+                            <InvocieDetail-Excise></InvocieDetail-Excise>
+                        </div>
+                         <div v-if="activeTab == 3">
+                            <InvocieDetail-Charge></InvocieDetail-Charge>
+                        </div>
+                        <div  v-if="activeTab == 4">
+                            <InvocieDetail-Duty></InvocieDetail-Duty>
+                        </div>
+                        <div  v-if="activeTab == 5">
+                            <InvocieDetail-Permit></InvocieDetail-Permit>
                         </div>
  
                     </div>
@@ -187,9 +188,12 @@ export default {
         return ({
             activeTab: 0,
             tabs: [
-                "Declaration Control",
-                "Payment",
-                "Trading Partner",
+                "Invocie Detail",
+                " Tax Incentives",
+                "Excise",
+                 "Charge",
+                "Duty",
+                "Permit",
             ]
         })
     }

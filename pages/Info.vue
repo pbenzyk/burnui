@@ -8,7 +8,7 @@
                 <span class="text-breadcrumbs font-semibold">Declaration Control</span>
             </div>
             <div class="pl-20 pr-20 pt-14 flex items-end">
-                <h2 class="font-semibold text-3xl text-white">Declaration Control</h2>
+                <h2 class="font-semibold text-3xl text-white">DECLARATION CONTROL</h2>
                 <v-spacer></v-spacer>
                 <v-btn class="ml-1 " x-large elevation="0" color="headmenu">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

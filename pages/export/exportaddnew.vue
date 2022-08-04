@@ -3,9 +3,9 @@
     <div class="sticky top-64p" style="z-index:999;">
         <div class="esap-header">
             <div class="pl-20 pt-6">
-                <span class="text-breadcrumbs ">Import Declaration List /</span>
-                <span class="text-breadcrumbs font-semibold">Import Declaration List/</span>
-                <span class="text-breadcrumbs font-semibold">Add New</span>
+                <span class="text-breadcrumbs ">Export Declaration / </span>
+                <span class="text-breadcrumbs font-semibold">Export Declaration List/</span>
+                <span class="text-breadcrumbs font-semibold">Declaration Control</span>
             </div>
             <div class="pl-20 pr-20 pt-14 flex items-end">
                 <h2 class="font-semibold text-3xl text-white">DECLARATION CONTROL</h2>
@@ -146,7 +146,7 @@
                     <div class="p-8">
                         <div class="flex border-b-2 border-gray-200">
                             <v-btn class="w-60" dark x-large color="base"><span class="font-semibold">Declaration Control</span></v-btn>
-                            <v-btn class="w-60 ml-2" text   x-large  ><span class="font-semibold">Invoice</span></v-btn>
+                            <v-btn class="w-60 ml-2" text   x-large  @click="$router.push('/export/exportinvoice')"><span class="font-semibold">Invoice</span></v-btn>
                             <v-spacer></v-spacer>
                             <v-btn class="pb-1" fab color="grey" outlined>
                                 <v-icon>fa-thin fa-circle-info</v-icon>
@@ -165,7 +165,7 @@
                             <AddNew-Declaration></AddNew-Declaration>
                         </div>
                         <div  v-if="activeTab == 1">
-                            <AddNew-Payment></AddNew-Payment>
+                            <AddNew-Expayment></AddNew-Expayment>
                         </div>
                         <div  v-if="activeTab == 2">
                             <AddNew-Trading></AddNew-Trading>

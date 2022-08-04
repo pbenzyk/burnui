@@ -3,8 +3,8 @@
     <div class="sticky top-64p" style="z-index:999;">
         <div class="esap-header2">
             <div class="pl-20 pt-6">
-                <span class="text-breadcrumbs ">Import Declaration /</span>
-                <span class="text-breadcrumbs ">Import Declaration List /</span>
+                 <span class="text-breadcrumbs ">Invoice Control </span>
+                <span class="text-breadcrumbs font-semibold">Export Declaration List/</span>
                 <span class="text-breadcrumbs font-semibold">Invoice List</span>
             </div>
             <div class="pl-20 pr-20 pt-4 flex items-end">
@@ -74,7 +74,7 @@
     <div class="h-14 esap-bg "> </div>
     <v-container class="-mt-16">
         <div class="flex flex-col md:flex-row">
-            <div class="p-2 w-full md:w-1/8">
+            <div class="p-2 w-full md:w-2/12">
                 <v-card class="pt-6 h-full esap-bg" flat outlined color="#ffdacb">
                     <v-card-text>
                         <div class="flex rounded-t-lg bg-white h-10 items-center p-2">
@@ -151,7 +151,7 @@
                 <v-card class="h-full ml-5">
                     <div class="p-8">
                         <div class="flex border-b-2 border-gray-200">
-                            <v-btn class="w-60 ml-2" text x-large><span class="font-semibold">Declaration Control</span></v-btn>
+                            <v-btn class="w-60 ml-2" text x-large><span class="font-semibold" @click="$router.push('/export/exportaddnew')">Declaration Control</span></v-btn>
                             <v-btn class="w-60" dark x-large color="base"><span class="font-semibold">Invoice</span></v-btn>
 
                             <v-spacer></v-spacer>

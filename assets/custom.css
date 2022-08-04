@@ -2,6 +2,9 @@
 *{
     font-family: 'Kanit', sans-serif;
 }
+.w-300px{
+    width:300px;
+}
 .mt-05{
     margin-top:0.5px!important;
 }
