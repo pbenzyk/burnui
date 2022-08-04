@@ -3,23 +3,21 @@
     <div class="sticky top-64p" style="z-index:999;">
         <div class="esap-header">
             <div class="pl-20 pt-6">
-                <span class="text-breadcrumbs font-semibold">Invoice Control</span>
+                <span class="text-breadcrumbs ">Import Declaration List /</span>
+                <span class="text-breadcrumbs font-semibold">Import Declaration List</span>
             </div>
             <div class="pl-20 pr-20 pt-14 flex items-end">
-                <h2 class="font-semibold text-3xl text-white">INVOICE CONTROL</h2>
+                <h2 class="font-semibold text-3xl text-white">INVOICE DETAIL</h2>
                 <v-spacer></v-spacer>
 
                 <Core-ButtonHead name="Copy" :icon="require('@/assets/images/svg/copy.svg')"></Core-ButtonHead>
-                <div @click="$router.push('/import/invoice/')">
+                <div @click="$router.push('/import/invoice/invoicecontrol')">
                     <Core-ButtonHead name="Delete" :icon="require('@/assets/images/svg/delete.svg')"></Core-ButtonHead>
                 </div>
                 <Core-ButtonHead name="Print" :icon="require('@/assets/images/svg/menu/print.svg')"></Core-ButtonHead>
                 <Core-ButtonHead name="Calculate" :icon="require('@/assets/images/svg/menu/cal.svg')"></Core-ButtonHead>
                 <Core-ButtonHead name="Validate" :icon="require('@/assets/images/svg/menu/validate.svg')"></Core-ButtonHead>
- 
-                <div @click="$router.push('/import/invoice/invoicedetail')">
-                    <Core-ButtonHead otherclass="text-white" color="#4F4BFF" name="Add New" :icon="require('@/assets/images/svg/plus.svg')"></Core-ButtonHead>
-                </div>
+                <Core-ButtonHead otherclass="text-white" color="#34C38F" name="Save" :icon="require('@/assets/images/svg/menu/save.svg')"></Core-ButtonHead>
 
             </div>
         </div>
@@ -40,7 +38,7 @@
                             <v-spacer></v-spacer>
                             <span class="font-semibold">-</span>
                         </div>
-                          <div class="cursor-pointer flex  bg-white h-10 items-center  mt-06 p-2">
+                        <div class="cursor-pointer flex  bg-white h-10 items-center  mt-05 p-2">
                             Order
                             <v-spacer></v-spacer>
                             <span class="font-semibold">1</span>
@@ -60,6 +58,13 @@
                             </span>
                         </div>
                         <div @click="$router.push('/import/invoice/')" class="cursor-pointer flex rounded-lg bg-purple h-10 items-center  mt-1 p-2 text-white font-semibold">
+                            Go to Invoice List
+                            <v-spacer></v-spacer>
+                            <span class="font-semibold">
+                                <v-icon dark>fa-solid fa-circle-arrow-right</v-icon>
+                            </span>
+                        </div>
+                        <div @click="$router.push('/import/invoice/invoicecontrol/')" class="cursor-pointer flex rounded-lg bg-purple h-10 items-center  mt-1 p-2 text-white font-semibold">
                             Go to Invoice Control
                             <v-spacer></v-spacer>
                             <span class="font-semibold">
@@ -73,7 +78,7 @@
                                 <v-icon dark>fa-solid fa-circle-arrow-right</v-icon>
                             </span>
                         </div>
-                        <div  @click="$router.push('/import/invoice/invoicedetail/')"  class="cursor-pointer flex rounded-lg bg-purple h-10 items-center  mt-1 p-2 text-white font-semibold">
+                        <div @click="$router.push('/import/invoice/invoicedetail/')" class="cursor-pointer flex rounded-lg bg-purple h-10 items-center  mt-1 p-2 text-white font-semibold">
                             Add New Items
                             <v-spacer></v-spacer>
                             <span class="font-semibold">
@@ -101,6 +106,27 @@
                             <span class="font-semibold">0</span>
                         </div>
 
+                        <v-card outlined   flat class="mt-6"> 
+                            <v-card-title class="base"  >
+                                <span @click="$router.push('/import/invoice')" class="cursor-pointer text-sm font-semibold text-white">Invoice No. ESAP01 </span>
+                                <v-spacer></v-spacer>
+
+                                <v-btn class="rounded-lg" fab x-small color="success">
+                                    <span class="text-sm font-semibold">1</span>
+                                </v-btn>
+                                <v-btn class="ml-2 rounded-full" fab x-small color="white">
+                                    <v-icon size="10" color="base">fa-solid fa-angle-up</v-icon>
+                                </v-btn>
+
+                            </v-card-title>
+                            <v-card-text>
+                                <ul class="list-disc mt-4">
+                                    <li class="text-base">0001-001</li>
+                                  
+                                </ul>
+                            </v-card-text>
+                        </v-card>
+
                     </v-card-text>
                 </v-card>
             </div>
@@ -109,7 +135,22 @@
                 <v-card class="h-full ml-5">
                     <div class="p-8">
 
-                        <div class="flex justify-center items-center my-4 bg-gray">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="w-6/12   flex h-full">
+                                <label class="text-sm font-semibold mt-2">Item</label>
+                                <v-text-field class="ml-1" value="0001" dense placeholder="Filter Name" color="base" outlined></v-text-field>
+                                <label class="text-sm font-semibold ml-6  mt-2">Declare</label>
+                                <v-text-field class="ml-1" dense value="0001" color="base" outlined></v-text-field>
+                                <v-text-field flat class="" dense color="base" outlined></v-text-field>
+                                <v-btn dark class="rounded-lg ml-2" color="base">Go</v-btn>
+                            </div>
+                            <div class="w-6/12 flex justify-end">
+                                <Core-ButtonInfo></Core-ButtonInfo>
+                            </div>
+
+                        </div>
+
+                        <div class="flex justify-center items-center my-1 bg-gray">
                             <div @click="activeTab = index" :class="activeTab===index ? 'bg-orange-base text-orange-base' : ' text-gray-500'" class="w-1/3 text-center cursor-pointer py-2 px-4 rounded transition" v-for="(tab, index) in tabs" :key="index">
                                 <div class="font-semibold flex flex-col md:flex-row justify-center items-center">
                                     <v-btn :outlined="activeTab!=index" :dark="activeTab===index" fab elevation="0" class="rounded-xl" x-small color="base"><span class="text-base font-semibold">{{index+1}}</span></v-btn>
@@ -118,13 +159,22 @@
                             </div>
                         </div>
                         <div v-if="activeTab == 0">
-                            <AddNewInvoice-Invoicecontrol></AddNewInvoice-Invoicecontrol>
+                            <InvocieDetail-Invociedetail></InvocieDetail-Invociedetail>
                         </div>
                         <div v-if="activeTab == 1">
-                            <AddNewInvoice-Charge></AddNewInvoice-Charge>
+                            <InvocieDetail-TaxIncentives></InvocieDetail-TaxIncentives>
                         </div>
                         <div v-if="activeTab == 2">
-                            <AddNewInvoice-Chargedoc></AddNewInvoice-Chargedoc>
+                            <InvocieDetail-Excise></InvocieDetail-Excise>
+                        </div>
+                        <div v-if="activeTab == 3">
+                            <InvocieDetail-Charge></InvocieDetail-Charge>
+                        </div>
+                        <div v-if="activeTab == 4">
+                            <InvocieDetail-Duty></InvocieDetail-Duty>
+                        </div>
+                        <div v-if="activeTab == 5">
+                            <InvocieDetail-Permit></InvocieDetail-Permit>
                         </div>
 
                     </div>
@@ -143,9 +193,12 @@ export default {
         return ({
             activeTab: 0,
             tabs: [
-                "Invoicecontrol",
-                "Charge (Inv.)",
-                "Charge (เอกสารอื่นๆ)",
+                "Invocie Detail",
+                " Tax Incentives",
+                "Excise",
+                "Charge",
+                "Duty",
+                "Permit",
             ]
         })
     }

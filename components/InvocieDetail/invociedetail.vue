@@ -147,10 +147,14 @@
                             <div class="bg-gray-200 p-2">
                                 <div class="flex">
                                     <label class="text-xl pt-1 font-semibold">ข้อมูลเเละรายละเอียดที่เเสดงของ</label>
-                                    <v-spacer></v-spacer>
-                                    <v-btn color="#495057" depressed dark>ปิด</v-btn>
+                                    <v-spacer></v-spacer> 
+                                         <v-btn @click="hidden=!hidden" class="ml-3 rounded-lg" depressed :color="(!hidden)?'#495057':'base'" dark>
+                                            <span v-if="!hidden">ปิด</span>
+                                            <span v-else>เพิ่มราคา</span>
+                                        </v-btn>
                                 </div>
-                                <label class="text-sm font-semibold">Increased Terms</label>
+                                <div v-if="!hidden" class="animate__animated animate__fadeIn">
+                                    <label class="text-sm font-semibold">Increased Terms</label>
                                 <v-combobox dense value="FCA = FREE CARRIER" color="base" outlined></v-combobox>
                                 <div class="grid grid-cols-2">
                                     <div class="flex ">
@@ -183,6 +187,7 @@
                                     <div class="w-full pt-6">
                                         <v-btn   depressed color="base"  dark> คำนวน</v-btn>
                                     </div>
+                                </div>
                                 </div>
 
                             </div>
@@ -310,7 +315,9 @@ export default {
 
     },
     data() {
-        return {}
+        return {
+            hidden:false,
+        }
     },
     props: {
 

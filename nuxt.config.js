@@ -17,6 +17,7 @@ export default {
     link: [
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css' },
       {rel:'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'},
+      {rel:'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'},
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [

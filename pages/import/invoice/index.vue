@@ -84,7 +84,7 @@
                             </span>
                         </div>
 
-                        <div  class="flex rounded-lg bg-white h-10 items-center  mt-6 p-2 ">
+                        <div @click="$router.push('/import/invoice/')" class="cursor-pointer  flex rounded-lg bg-white h-10 items-center  mt-6 p-2 ">
                             <v-icon color="#F1B44C">fa-solid fa-folder-closed</v-icon>
                             <span class="font-semibold ml-2">Invoice (s)</span>
                             <v-spacer></v-spacer>
