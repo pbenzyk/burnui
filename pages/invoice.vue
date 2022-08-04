@@ -155,9 +155,7 @@
                             <v-btn class="w-60" dark x-large color="base"><span class="font-semibold">Invoice</span></v-btn>
 
                             <v-spacer></v-spacer>
-                            <v-btn class="pb-1" fab color="grey" outlined>
-                                <v-icon>fa-thin fa-circle-info</v-icon>
-                            </v-btn>
+                           <Core-ButtonInfo></Core-ButtonInfo>
                         </div>
 
                         <div class="mt-8">

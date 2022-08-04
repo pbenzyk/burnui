@@ -3,8 +3,8 @@
     <div class="sticky top-64p" style="z-index:999;">
         <div class="esap-header">
             <div class="pl-20 pt-6">
-                <span class="text-breadcrumbs ">Export Declaration List </span>
-                <span class="text-breadcrumbs font-semibold">Export Declaration /</span>
+                <span class="text-breadcrumbs ">Export Declaration /</span>
+                <span class="text-breadcrumbs font-semibold">Export Declaration List</span>
             </div>
             <div class="pl-20 pr-20 pt-14 flex items-end">
                 <h2 class="font-semibold text-3xl text-white">Export Declaration </h2>
@@ -17,8 +17,10 @@
                     <Core-ButtonHead name="Import File" :icon="require('@/assets/images/svg/import.svg')"></Core-ButtonHead>
                     <Core-ButtonHead name="Delete" :icon="require('@/assets/images/svg/delete.svg')"></Core-ButtonHead>
                     <Core-ButtonHead name="Copy" :icon="require('@/assets/images/svg/copy.svg')"></Core-ButtonHead>
-                    
-                    <Core-ButtonHead otherclass="text-white" @click="$router.push('/import/add')" color="#4F4BFF" name="Add New" :icon="require('@/assets/images/svg/plus.svg')"></Core-ButtonHead>
+                    <div @click="$router.push('/export/exportaddnew')"> 
+                        <Core-ButtonHead otherclass="text-white"  color="#4F4BFF" name="Add New" :icon="require('@/assets/images/svg/plus.svg')"></Core-ButtonHead>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,22 +56,20 @@
                                                 </div>
                                             </v-btn-toggle>
                                         </div>
-                                        
+
                                     </div>
                                     <div class="w-1/2 ">
                                         <div class="flex w-full pt-7 space-x-4 justify-end">
                                             <v-btn depressed color="#34C38F" dark>ตรวจสอบสถานะ 04</v-btn>
                                             <v-btn depressed color="#46BFCF" dark>รายงานสถานะ 04</v-btn>
-                                           
+
                                         </div>
-                                        
+
                                     </div>
-                                    
 
                                 </div>
 
                             </div>
-                            
 
                         </v-card-text>
                         <v-data-table :headers="headers" :items="ImportDeclaration" :single-select="singleSelect" item-key="no" show-select :items-per-page="30">

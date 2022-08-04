@@ -154,9 +154,7 @@
                             <v-btn class="w-60" dark x-large color="base"><span class="font-semibold">Declaration Control</span></v-btn>
                             <v-btn class="w-60 ml-2" text   x-large  ><span class="font-semibold">Invoice</span></v-btn>
                             <v-spacer></v-spacer>
-                            <v-btn class="pb-1" fab color="grey" outlined>
-                                <v-icon>fa-thin fa-circle-info</v-icon>
-                            </v-btn>
+                           <Core-ButtonInfo></Core-ButtonInfo>
                         </div>
 
                         <div class="flex justify-center items-center my-4 bg-gray">
