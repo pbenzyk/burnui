@@ -1,32 +1,11 @@
 <template>
 <div>
-    <div class="sticky top-64p" style="z-index:999;">
-        <div class="esap-header">
-            <div class="pl-20 pt-6">
-                <span class="text-breadcrumbs ">Import Declaration List /</span>
-                <span class="text-breadcrumbs font-semibold">Import Declaration List</span>
-            </div>
-            <div class="pl-20 pr-20 pt-14 flex items-end">
-                <h2 class="font-semibold text-3xl text-white">Import Declaration List</h2>
-                <v-spacer></v-spacer>
-                <div class="flex flex-col md:flex-row flex-wrap">
-                    <Core-ButtonHead name="Receive" :icon="require('@/assets/images/svg/receive.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Send" :icon="require('@/assets/images/svg/send.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Print" :icon="require('@/assets/images/svg/print.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Export" :icon="require('@/assets/images/svg/export.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Import File" :icon="require('@/assets/images/svg/import.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Delete" :icon="require('@/assets/images/svg/delete.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Copy" :icon="require('@/assets/images/svg/copy.svg')"></Core-ButtonHead>
-                    <div @click="$router.push('/import/')">
-                        <Core-ButtonHead otherclass="text-white" color="#4F4BFF" name="Add New" :icon="require('@/assets/images/svg/plus.svg')"></Core-ButtonHead>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <Core-Header></Core-Header>
+
+
     <div>
-        <div class="h-40 esap-bg "> </div>
-        <div class="-mt-36 ">
+        <div class="h-40 esap-bg " v-if="(!$vuetify.breakpoint.mobile)"> </div>
+        <div class="md:-mt-36 ">
             <div>
                 <v-container grid-list-xs>
                     <v-card class="h-full  ">
@@ -34,8 +13,8 @@
 
                             <div class="p-2">
                                 <div class="flex">
-                                    <div class="w-1/2  ">
-                                        <div class="flex w-full">
+                                    <div class="w-full md:w-1/2  ">
+                                        <div class="flex flex-col md:flex-row w-full">
                                             <div>
                                                 <label>First Name</label>
                                                 <v-text-field append-icon="mdi-filter" color="#FE7640" outlined dense placeholder="Filter Name"></v-text-field>
@@ -118,6 +97,7 @@ export default {
     name: 'IndexPage',
     data: () => {
         return ({
+            nav:false,
             singleSelect: false,
             selected: [],
             toggle_exclusive: 2,

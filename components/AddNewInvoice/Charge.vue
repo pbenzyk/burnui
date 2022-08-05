@@ -2,7 +2,7 @@
 <div>
     <v-form>
         <div class="    pt-8  ">
-                <div class="flex space-x-4">
+                <div class="flex flex-col md:flex-row  md:space-x-4">
                      <div class="w-full">
                         <label class="text-base font-semibold">Forwarding</label>
                         <v-text-field dense  value="37.03"   color="base" outlined></v-text-field>
@@ -25,7 +25,7 @@
                     </div>
                      <div class=" w-full">
                             <v-radio-group>
-                        <div class="flex space-x-4  ">
+                        <div class="flex flex-col md:flex-row  md:space-x-4  ">
                                     <div class="-mt-3">
                                         <label class="text-base pl-1   font-semibold" >-</label>
                                         <v-radio color="base" class="pt-2"></v-radio>
@@ -44,7 +44,7 @@
                     </div>     
                 </div>
 
-                <div class="flex space-x-4">
+                <div class="flex flex-col md:flex-row  md:space-x-4">
                      <div class="w-full">
                         <label class="text-base font-semibold">Freight</label>
                         <v-text-field dense value="55.54"  color="base" outlined></v-text-field>
@@ -67,7 +67,7 @@
                     </div>
                      <div class=" w-full">
                             <v-radio-group>
-                        <div class="flex space-x-4  ">
+                        <div class="flex flex-col md:flex-row  md:space-x-4  ">
                                     <div class="-mt-3">
                                         <label class="text-base pl-1   font-semibold" >-</label>
                                         <v-radio color="base" class="pt-2"></v-radio>
@@ -86,7 +86,7 @@
                     </div>     
                 </div>
 
-                <div class="flex space-x-4">
+                <div class="flex flex-col md:flex-row  md:space-x-4">
                      <div class="w-full">
                         <label class="text-base font-semibold">Insurance</label>
                         <v-text-field dense value="20000" color="base" outlined></v-text-field>
@@ -109,7 +109,7 @@
                     </div>
                      <div class=" w-full">
                             <v-radio-group>
-                        <div class="flex space-x-4  ">
+                        <div class="flex flex-col md:flex-row  md:space-x-4  ">
                                     <div class="-mt-3">
                                         <label class="text-base pl-1   font-semibold" >-</label>
                                         <v-radio color="base" class="pt-2"></v-radio>
@@ -129,7 +129,7 @@
                 </div>
 
 
-                <div class="flex space-x-4">
+                <div class="flex flex-col md:flex-row  md:space-x-4">
                      <div class="w-full">
                         <label class="text-base font-semibold">Packing</label>
                         <v-text-field dense value="1,8256" color="base" outlined></v-text-field>
@@ -152,7 +152,7 @@
                     </div>
                      <div class=" w-full">
                             <v-radio-group>
-                        <div class="flex space-x-4  ">
+                        <div class="flex flex-col md:flex-row  md:space-x-4  ">
                                     <div class="-mt-3">
                                         <label class="text-base pl-1   font-semibold" >-</label>
                                         <v-radio color="base" class="pt-2"></v-radio>
@@ -171,7 +171,7 @@
                     </div>     
                 </div>
 
-                <div class="flex space-x-4">
+                <div class="flex flex-col md:flex-row  md:space-x-4">
                      <div class="w-full">
                         <label class="text-base font-semibold">Interior Transport</label>
                         <v-text-field dense value="37.04" color="base" outlined></v-text-field>
@@ -194,7 +194,7 @@
                     </div>
                      <div class=" w-full">
                             <v-radio-group>
-                        <div class="flex space-x-4  ">
+                        <div class="flex flex-col md:flex-row  md:space-x-4  ">
                                     <div class="-mt-3">
                                         <label class="text-base pl-1   font-semibold" >-</label>
                                         <v-radio color="base" class="pt-2"></v-radio>
@@ -213,7 +213,7 @@
                     </div>     
                 </div>
 
-                <div class="flex space-x-4">
+                <div class="flex flex-col md:flex-row  md:space-x-4">
                      <div class="w-full">
                         <label class="text-base font-semibold">Landing</label>
                         <v-text-field dense value="148.15" color="base" outlined></v-text-field>
@@ -236,7 +236,7 @@
                     </div>
                      <div class=" w-full">
                             <v-radio-group>
-                        <div class="flex space-x-4  ">
+                        <div class="flex flex-col md:flex-row  md:space-x-4  ">
                                     <div class="-mt-3">
                                         <label class="text-base pl-1   font-semibold" >-</label>
                                         <v-radio color="base" class="pt-2"></v-radio>
@@ -255,7 +255,7 @@
                     </div>     
                 </div>
 
-                <div class="flex space-x-4">
+                <div class="flex flex-col md:flex-row  md:space-x-4">
                      <div class="w-full">
                         <label class="text-base font-semibold">Other</label>
                         <v-text-field dense value="185" color="base" outlined></v-text-field>
@@ -278,7 +278,7 @@
                     </div>
                      <div class=" w-full">
                             <v-radio-group>
-                        <div class="flex space-x-4  ">
+                        <div class="flex flex-col md:flex-row  md:space-x-4  ">
                                     <div class="-mt-3">
                                         <label class="text-base pl-1   font-semibold" >-</label>
                                         <v-radio color="base" class="pt-2"></v-radio>

@@ -1,29 +1,6 @@
 <template>
 <div>
-    <div class="sticky top-64p" style="z-index:999;">
-        <div class="esap-header">
-            <div class="pl-20 pt-6">
-                <span class="text-breadcrumbs font-semibold">Invoice Control</span>
-            </div>
-            <div class="pl-20 pr-20 pt-14 flex items-end">
-                <h2 class="font-semibold text-3xl text-white">INVOICE CONTROL</h2>
-                <v-spacer></v-spacer>
-
-                <Core-ButtonHead name="Copy" :icon="require('@/assets/images/svg/copy.svg')"></Core-ButtonHead>
-                <div @click="$router.push('/import/invoice/')">
-                    <Core-ButtonHead name="Delete" :icon="require('@/assets/images/svg/delete.svg')"></Core-ButtonHead>
-                </div>
-                <Core-ButtonHead name="Print" :icon="require('@/assets/images/svg/menu/print.svg')"></Core-ButtonHead>
-                <Core-ButtonHead name="Calculate" :icon="require('@/assets/images/svg/menu/cal.svg')"></Core-ButtonHead>
-                <Core-ButtonHead name="Validate" :icon="require('@/assets/images/svg/menu/validate.svg')"></Core-ButtonHead>
- 
-                <div @click="$router.push('/import/invoice/invoicedetail')">
-                    <Core-ButtonHead otherclass="text-white" color="#4F4BFF" name="Add New" :icon="require('@/assets/images/svg/plus.svg')"></Core-ButtonHead>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <Core-Header3 name="INVOICE CONTROL" action="" title="Invoice Control"> </Core-Header3> 
     <div class="h-40 esap-bg "> </div>
     <v-container class="-mt-36 ">
         <div class="flex flex-col md:flex-row">
@@ -109,8 +86,8 @@
                 <v-card class="h-full ml-5">
                     <div class="p-8">
 
-                        <div class="flex justify-center items-center my-4 bg-gray">
-                            <div @click="activeTab = index" :class="activeTab===index ? 'bg-orange-base text-orange-base' : ' text-gray-500'" class="w-1/3 text-center cursor-pointer py-2 px-4 rounded transition" v-for="(tab, index) in tabs" :key="index">
+                        <div class="flex flex-col md:flex-row justify-center items-center my-4 bg-gray">
+                            <div @click="activeTab = index" :class="activeTab===index ? 'bg-orange-base text-orange-base' : ' text-gray-500'" class="w-full md:w-1/3 text-center cursor-pointer py-2 px-4 rounded transition" v-for="(tab, index) in tabs" :key="index">
                                 <div class="font-semibold flex flex-col md:flex-row justify-center items-center">
                                     <v-btn :outlined="activeTab!=index" :dark="activeTab===index" fab elevation="0" class="rounded-xl" x-small color="base"><span class="text-base font-semibold">{{index+1}}</span></v-btn>
                                     <span class="md:ml-6">{{tab}}</span>

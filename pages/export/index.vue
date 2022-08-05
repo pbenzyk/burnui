@@ -1,30 +1,7 @@
 <template>
 <div>
-    <div class="sticky top-64p" style="z-index:999;">
-        <div class="esap-header">
-            <div class="pl-20 pt-6">
-                <span class="text-breadcrumbs ">Export Declaration /</span>
-                <span class="text-breadcrumbs font-semibold">Export Declaration List</span>
-            </div>
-            <div class="pl-20 pr-20 pt-14 flex items-end">
-                <h2 class="font-semibold text-3xl text-white">Export Declaration </h2>
-                <v-spacer></v-spacer>
-                <div class="flex flex-col md:flex-row flex-wrap">
-                    <Core-ButtonHead name="Receive" :icon="require('@/assets/images/svg/receive.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Send" :icon="require('@/assets/images/svg/send.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Print" :icon="require('@/assets/images/svg/print.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Export" :icon="require('@/assets/images/svg/export.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Import File" :icon="require('@/assets/images/svg/import.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Delete" :icon="require('@/assets/images/svg/delete.svg')"></Core-ButtonHead>
-                    <Core-ButtonHead name="Copy" :icon="require('@/assets/images/svg/copy.svg')"></Core-ButtonHead>
-                    <div @click="$router.push('/export/exportaddnew')"> 
-                        <Core-ButtonHead otherclass="text-white"  color="#4F4BFF" name="Add New" :icon="require('@/assets/images/svg/plus.svg')"></Core-ButtonHead>
+    <Core-Header5 name="Export Declaration " action="Export Declaration List" title="Export Declaration /"></Core-Header5>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div>
         <div class="h-40 esap-bg "> </div>
         <div class="-mt-36 ">
@@ -32,11 +9,10 @@
                 <v-container grid-list-xs>
                     <v-card class="h-full  ">
                         <v-card-text>
-
                             <div class="p-2">
-                                <div class="flex">
-                                    <div class="w-1/2  ">
-                                        <div class="flex w-full">
+                                <div class="flex flex-col md:flex-row">
+                                    <div class="w-full md:w-full md:w-1/2  ">
+                                        <div class="flex flex-col md:flex-row w-full">
                                             <div>
                                                 <label>First Name</label>
                                                 <v-text-field append-icon="mdi-filter" color="#FE7640" outlined dense placeholder="Filter Name"></v-text-field>
@@ -44,31 +20,28 @@
 
                                             <v-btn-toggle class="ml-2" v-model="toggle_exclusive">
                                                 <div class="input-left ">
-                                                    <label>วันที่สร้างเอกสาร</label>
+                                                    <label v-if="(!$vuetify.breakpoint.mobile)" >วันที่สร้างเอกสาร</label>
                                                     <v-text-field append-icon="mdi-calendar-range" color="#FE7640" class="input-left " outlined dense placeholder="From"></v-text-field>
                                                 </div>
-                                                <div class="dd">
-                                                    <br>
+                                                <div class="dd" >
+                                                    <br v-if="(!$vuetify.breakpoint.mobile)" >
                                                     <v-text-field class="dd " append-icon="mdi-calendar-range" color="#FE7640" style="border-left:0px!important" outlined dense placeholder="To"></v-text-field>
                                                 </div>
-                                                <div class="pb-6 ml-2"> <br>
+                                                <div class="pb-6 ml-2"> <br v-if="(!$vuetify.breakpoint.mobile)" > 
                                                     <button class="  bg-orange-500 hover:bg-orange-400 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white">Search</button>
                                                 </div>
                                             </v-btn-toggle>
                                         </div>
 
                                     </div>
-                                    <div class="w-1/2 ">
-                                        <div class="flex w-full pt-7 space-x-4 justify-end">
+                                    <div class="w-full md:w-1/2 ">
+                                        <div class="flex flex-col md:flex-row w-full pt-7 md:space-x-4 justify-end">
                                             <v-btn depressed color="#34C38F" dark>ตรวจสอบสถานะ 04</v-btn>
-                                            <v-btn depressed color="#46BFCF" dark>รายงานสถานะ 04</v-btn>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
+                                            <br v-if="($vuetify.breakpoint.mobile)">
+                                            <v-btn  depressed color="#46BFCF" dark>รายงานสถานะ 04</v-btn> 
+                                        </div> 
+                                    </div> 
+                                </div> 
                             </div>
 
                         </v-card-text>

@@ -1,30 +1,7 @@
 <template>
 <div>
-    <div class="sticky top-64p" style="z-index:999;">
-        <div class="esap-header2">
-            <div class="pl-20 pt-6">
-                <span class="text-breadcrumbs ">Import Declaration /</span>
-                <span class="text-breadcrumbs ">Import Declaration List /</span>
-                <span class="text-breadcrumbs font-semibold">Invoice List</span>
-            </div>
-            <div class="pl-20 pr-20 pt-4 flex items-end">
-                <h2 class="font-semibold text-xl text-white uppercase">Invoice</h2>
-                <v-spacer></v-spacer>
-                 <Core-ButtonHead name="XML" :icon="require('@/assets/images/svg/menu/xml.svg')"></Core-ButtonHead>
-                <Core-ButtonHead name="Message" :icon="require('@/assets/images/svg/menu/message.svg')"></Core-ButtonHead>
-                <Core-ButtonHead name="Receive" :icon="require('@/assets/images/svg/menu/receive.svg')"></Core-ButtonHead>
-                <Core-ButtonHead name="Validate" :icon="require('@/assets/images/svg/menu/validate.svg')"></Core-ButtonHead>
-                <Core-ButtonHead name="Send" :icon="require('@/assets/images/svg/menu/send.svg')"></Core-ButtonHead>
-                <Core-ButtonHead name="Print" :icon="require('@/assets/images/svg/menu/print.svg')"></Core-ButtonHead>
-                <div @click="$router.push('/')">
-                    <Core-ButtonHead name="Cancel" :icon="require('@/assets/images/svg/menu/cancel.svg')"></Core-ButtonHead>
-                </div>
-                <Core-ButtonHead otherclass="text-white" color="#34C38F" name="Save" :icon="require('@/assets/images/svg/menu/save.svg')"></Core-ButtonHead>
- 
-            </div>
-        </div>
-    </div>
-
+    <Core-Header2 name="Invoice" title="Import Declaration /Import Declaration List /" action="Invoice List"></Core-Header2>
+   
     <div class="h-14 esap-bg "> </div>
     <v-container class="-mt-16">
         <div class="flex flex-col md:flex-row">
@@ -69,7 +46,7 @@
                                 <v-icon dark>fa-solid fa-circle-arrow-right</v-icon>
                             </span>
                         </div>
-                        <div  @click="$router.push('/import/invoice/invoicecontrol/')"  class="cursor-pointer flex rounded-lg bg-purple h-10 items-center  mt-1 p-2 text-white font-semibold">
+                        <div @click="$router.push('/import/invoice/invoicecontrol/')" class="cursor-pointer flex rounded-lg bg-purple h-10 items-center  mt-1 p-2 text-white font-semibold">
                             Add New Items
                             <v-spacer></v-spacer>
                             <span class="font-semibold">
@@ -104,7 +81,7 @@
             <div class="p-2 w-full md:w-10/12">
                 <v-card class="h-full ml-5 ">
                     <div class="p-8">
-                        <div class="flex border-b-2 border-gray-200">
+                        <div class="flex flex-col md:flex-row border-b-2 border-gray-200">
                             <v-btn @click="$router.push('/import/')" class="w-60 ml-2" text x-large><span class="font-semibold">Declaration Control</span></v-btn>
                             <v-btn class="w-60" dark x-large color="base"><span class="font-semibold">Invoice</span></v-btn>
                             <v-spacer></v-spacer>
@@ -112,8 +89,8 @@
                         </div>
 
                         <div class="mt-8">
-                            <div class="flex justify-center items-center">
-                                <div class="w-1/2 flex  ">
+                            <div class="flex flex-col md:flex-row  justify-center items-center">
+                                <div class="w-full md:w-1/2 flex flex-col md:flex-row ">
                                     <div>
                                         <label class="text-sm font-semibold">First Name</label>
                                         <v-text-field append-icon="fa-filter" dense placeholder="Filter Name" color="base" outlined></v-text-field>
@@ -122,12 +99,12 @@
                                         <label class="text-sm font-semibold">วันที่สร้างเอกสาร</label>
                                         <div class="flex">
                                             <v-text-field append-icon="fa-calendar-day" dense placeholder="From" color="base" outlined></v-text-field>
-                                            <v-text-field flat class="" append-icon="fa-calendar-day" dense placeholder="To" color="base" outlined></v-text-field> 
+                                            <v-text-field flat class="" append-icon="fa-calendar-day" dense placeholder="To" color="base" outlined></v-text-field>
                                         </div>
                                     </div>
                                     <div class="pl-2">
                                         <br>
-                                        <v-btn dark class="rounded-lg" color="base">Search</v-btn>
+                                        <v-btn :block="$vuetify.breakpoint.mobile"  dark class="rounded-lg  " color="base">Search</v-btn>
                                     </div>
                                 </div>
                                 <v-spacer class="pl-6"></v-spacer>
@@ -148,12 +125,12 @@
                                         <v-icon color="#6F9CDF" size="18" class="mr-2">fa-duotone fa-clone</v-icon>
                                         <span class="text-sm font-semibold">Copy</span>
                                     </v-btn>
-                                    <v-btn  @click="$router.push('/import/invoice/invoicecontrol/')" dark class="rounded-lg" color="purple_base">
+                                    <v-btn @click="$router.push('/import/invoice/invoicecontrol/')" dark class="rounded-lg" color="purple_base">
                                         <v-icon color="" size="18" class="mr-2">fa-solid fa-plus</v-icon>Add New
                                     </v-btn>
                                 </div>
                             </div>
-                            <div class=" " style="width:100%;"> 
+                            <div class=" " style="width:100%;">
                                 <v-data-table :headers="headers" :items="items" :single-select="false" item-key="no" show-select :items-per-page="30">
 
                                     <template v-slot:item.status="{ item }">
@@ -165,10 +142,9 @@
                                         </v-btn>
                                     </template>
 
-                                     <template v-slot:item.ino="{ item }" >
-                                        <span class="cursor-pointer font-semibold" @click="$router.push('/import/invoice/invoicecontrol/')" >{{item.ino}}</span>
+                                    <template v-slot:item.ino="{ item }">
+                                        <span class="cursor-pointer font-semibold" @click="$router.push('/import/invoice/invoicecontrol/')">{{item.ino}}</span>
                                     </template>
-
 
                                 </v-data-table>
 

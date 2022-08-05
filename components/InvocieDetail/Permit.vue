@@ -20,7 +20,7 @@
             </div>
         </template>
         <template v-slot:item.action="{ item }">
-            <div class="p-2 flex space-x-4">
+            <div class="p-2 flex md:md:space-x-4">
                 <v-btn depressed x-small fab dark color="base"><span class="text-base">S</span></v-btn>
                 <v-btn depressed x-small fab dark color="base"><span class="text-base">D</span></v-btn>
                 <v-btn depressed x-small fab dark color="base"><span class="text-base">_</span></v-btn>

@@ -1,27 +1,7 @@
 <template>
 <div>
-    <div class="sticky top-64p" style="z-index:999;">
-        <div class="esap-header">
-            <div class="pl-20 pt-6">
-                <span class="text-breadcrumbs ">Import Declaration List /</span>
-                <span class="text-breadcrumbs font-semibold">Import Declaration List</span>
-            </div>
-            <div class="pl-20 pr-20 pt-14 flex items-end">
-                <h2 class="font-semibold text-3xl text-white">INVOICE DETAIL</h2>
-                <v-spacer></v-spacer>
-
-                <Core-ButtonHead name="Copy" :icon="require('@/assets/images/svg/copy.svg')"></Core-ButtonHead>
-                <div @click="$router.push('/import/invoice/invoicecontrol')">
-                    <Core-ButtonHead name="Delete" :icon="require('@/assets/images/svg/delete.svg')"></Core-ButtonHead>
-                </div>
-                <Core-ButtonHead name="Print" :icon="require('@/assets/images/svg/menu/print.svg')"></Core-ButtonHead>
-                <Core-ButtonHead name="Calculate" :icon="require('@/assets/images/svg/menu/cal.svg')"></Core-ButtonHead>
-                <Core-ButtonHead name="Validate" :icon="require('@/assets/images/svg/menu/validate.svg')"></Core-ButtonHead>
-                <Core-ButtonHead otherclass="text-white" color="#34C38F" name="Save" :icon="require('@/assets/images/svg/menu/save.svg')"></Core-ButtonHead>
-
-            </div>
-        </div>
-    </div>
+    <Core-Header4 name="INVOICE DETAIL" action="Import Declaration List" title="Import Declaration List /"></Core-Header4>
+   
     <div class="h-40 esap-bg "> </div>
     <v-container class="-mt-36 ">
         <div class="flex flex-col md:flex-row">
@@ -136,7 +116,7 @@
                     <div class="p-8">
 
                         <div class="flex flex-col md:flex-row">
-                            <div class="w-6/12   flex h-full">
+                            <div class="w-full md:w-6/12   flex  flex-col md:flex-row h-full">
                                 <label class="text-sm font-semibold mt-2">Item</label>
                                 <v-text-field class="ml-1" value="0001" dense placeholder="Filter Name" color="base" outlined></v-text-field>
                                 <label class="text-sm font-semibold ml-6  mt-2">Declare</label>
@@ -144,14 +124,14 @@
                                 <v-text-field flat class="" dense color="base" outlined></v-text-field>
                                 <v-btn dark class="rounded-lg ml-2" color="base">Go</v-btn>
                             </div>
-                            <div class="w-6/12 flex justify-end">
+                            <div class="w-full md:w-6/12 mt-2 md:mt-0 flex justify-end">
                                 <Core-ButtonInfo></Core-ButtonInfo>
                             </div>
 
                         </div>
 
-                        <div class="flex justify-center items-center my-1 bg-gray">
-                            <div @click="activeTab = index" :class="activeTab===index ? 'bg-orange-base text-orange-base' : ' text-gray-500'" class="w-1/3 text-center cursor-pointer py-2 px-4 rounded transition" v-for="(tab, index) in tabs" :key="index">
+                        <div class="flex flex-col md:flex-row justify-center items-center my-1 bg-gray">
+                            <div @click="activeTab = index" :class="activeTab===index ? 'bg-orange-base text-orange-base' : ' text-gray-500'" class="w-full md:w-1/3 text-center cursor-pointer py-2 px-4 rounded transition" v-for="(tab, index) in tabs" :key="index">
                                 <div class="font-semibold flex flex-col md:flex-row justify-center items-center">
                                     <v-btn :outlined="activeTab!=index" :dark="activeTab===index" fab elevation="0" class="rounded-xl" x-small color="base"><span class="text-base font-semibold">{{index+1}}</span></v-btn>
                                     <span class="md:ml-6">{{tab}}</span>
