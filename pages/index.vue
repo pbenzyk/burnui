@@ -2,7 +2,6 @@
 <div>
     <Core-Header></Core-Header>
 
-
     <div>
         <div class="h-40 esap-bg " v-if="(!$vuetify.breakpoint.mobile)"> </div>
         <div class="md:-mt-36 ">
@@ -22,14 +21,14 @@
 
                                             <v-btn-toggle class="ml-2" v-model="toggle_exclusive">
                                                 <div class="input-left ">
-                                                    <label>วันที่สร้างเอกสาร</label>
+                                                    <label v-if="!$vuetify.breakpoint.mobile">วันที่สร้างเอกสาร</label>
                                                     <v-text-field append-icon="mdi-calendar-range" color="#FE7640" class="input-left " outlined dense placeholder="From"></v-text-field>
                                                 </div>
                                                 <div class="dd">
-                                                    <br>
+                                                    <br v-if="!$vuetify.breakpoint.mobile">
                                                     <v-text-field class="dd " append-icon="mdi-calendar-range" color="#FE7640" style="border-left:0px!important" outlined dense placeholder="To"></v-text-field>
                                                 </div>
-                                                <div class="pb-6 ml-2"> <br>
+                                                <div class="pb-6 ml-2"> <br v-if="!$vuetify.breakpoint.mobile">
                                                     <button class="  bg-orange-500 hover:bg-orange-400 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white">Search</button>
                                                 </div>
                                             </v-btn-toggle>
@@ -97,7 +96,7 @@ export default {
     name: 'IndexPage',
     data: () => {
         return ({
-            nav:false,
+            nav: false,
             singleSelect: false,
             selected: [],
             toggle_exclusive: 2,
