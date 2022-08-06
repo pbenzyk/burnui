@@ -16,11 +16,11 @@ export default {
     ],
     link: [
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css' },
-      {rel:'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'},
-      {rel:'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'},
-      {rel:'stylesheet', href:'https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap'},
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ], 
+    ],
     script: [
       { src: 'https://cdn.tailwindcss.com' },
     ]
@@ -32,7 +32,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-  
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -56,18 +56,42 @@ export default {
       dark: false,
       themes: {
         light: {
-          // primary: colors.blue.darken2,
-          // accent: colors.grey.darken3,
-          // secondary: colors.amber.darken3,
-          // info: colors.teal.lighten1,
-          // warning: colors.amber.base,
-          // error: colors.deepOrange.accent4,
-          // success: colors.green.accent3,
-          headmenu:'#FFE0D3',
+          esap_primary: "#FF7640",
+          esap_accent: "#FFEAE3",
+          esap_error: '#EFF2F7',
+          // esap_secondary: colors.amber.darken3,
+          // esap_info: colors.teal.lighten1,
+          // esap_warning: colors.amber.base,
+          // esap_success: colors.green.accent3,
+
+
+          headmenu: '#FFE0D3',
           secondary: '#FE7640',
-          iconfile:'#F1B44C',
-          base:"#FE7640",
-          purple_base:"#4F4BFF"
+          iconfile: '#F1B44C',
+          base: "#FE7640",
+          purple_base: "#4F4BFF",
+          //button
+          ready: "#F15412",
+          accepted: "#F7D716",
+          greenline: "#28A745",
+          redline: "#F32424",
+          rejected: "#B20600",
+          error: "#990000",
+          cancel: "#748DA6",
+          wait: "#1363DF",
+          waitcancel: "#1363DF",
+          checked: "#47B5FF",
+          loaded: "#3EC70B",
+          //
+          default: "#FF7640",
+          red: "#F46A6A",
+          green: "#34C38F",
+          yellow: "#F1B44C",
+          black: "#212529",
+          gray1: "#495057",
+          gray2: "#ADB5BD",
+          white: "#FFFFFF",
+
         }
       }
     }
